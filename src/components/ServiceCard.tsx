@@ -34,6 +34,7 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
             src={service.image}
             alt={service.title}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            loading="lazy"
           />
           <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
             {currentPrice}
