@@ -120,6 +120,7 @@ const ImageGallery = ({ images, title }: ImageGalleryProps) => {
                   src={image}
                   alt={`Thumbnail ${index + 1}`}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </button>
             ))}
