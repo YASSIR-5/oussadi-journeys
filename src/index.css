@@ -154,12 +154,6 @@ All colors MUST be HSL.
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  @keyframes line-draw {
-    animation-duration: 600ms !important;
-  }
-}
-
 /* Icon settle with subtle rotation and glow */
 @keyframes icon-settle {
   0% {
