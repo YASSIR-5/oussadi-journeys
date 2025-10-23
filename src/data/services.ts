@@ -35,6 +35,55 @@ export interface Service {
   hideFromList?: boolean;
 }
 
+// Image asset mapping
+const images = {
+  agafay_pack_main: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2Fb5f5441734ef416baa85d8e3ec7bb8f2?format=webp&width=800',
+  agafay_pack_1: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F54af5aa762624137b093dbe7edde208d?format=webp&width=800',
+  agafay_pack_2: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2Fec6b047bb488465faf61e8913170d3a5?format=webp&width=800',
+  agafay_pack_3: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2Fe4e68dede71e42f39ef67a08923f863f?format=webp&width=800',
+  agafay_pack_4: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F7a825343b9664a24a09b45b7c69f6694?format=webp&width=800',
+  
+  biking_tour_main: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F4d2ce535363e4cc692477ef4f23b5fb7?format=webp&width=800',
+  biking_tour_1: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F40bbed6ba6d6423da7499530d63db559?format=webp&width=800',
+  biking_tour_2: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F319381ce1bf543e898497c276f90b721?format=webp&width=800',
+  
+  buggy_palmeraie_main: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F5c610c6d09dd4bd9a003d7e556984053?format=webp&width=800',
+  buggy_palmeraie_1: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F9a601a9fdc1243fe862993554367253d?format=webp&width=800',
+  buggy_palmeraie_2: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F5f0f0f78779b4208bbe0c943e156ca63?format=webp&width=800',
+  
+  camel_agafay_main: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F06bff8d5284f411dacffee8a6c63d0d6?format=webp&width=800',
+  camel_agafay_1: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F512cf3ff29254e6180643fc5ad9e1aa7?format=webp&width=800',
+  camel_agafay_2: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2Fac0b69435e4c4747b105fe6d78d340eb?format=webp&width=800',
+  
+  camel_palmeraie_main: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F50ec852a45da452c8a92e8b7d9e2331b?format=webp&width=800',
+  camel_palmeraie_1: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2Fd180924c35974120aa0918ebef2e5150?format=webp&width=800',
+  camel_palmeraie_2: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F655030f2918d478dad9d1d2370aaf74f?format=webp&width=800',
+  
+  cooking_class_main: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F4aea1cc0839c4ce79b683f5c65079b3f?format=webp&width=800',
+  cooking_class_1: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2Fbb9304b97ee045bbb066b17eaaa5b32d?format=webp&width=800',
+  cooking_class_2: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F56eb525b8f6c4371be30b900576eb99c?format=webp&width=800',
+  
+  horse_palmeraie_main: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2Fb8bba24fffe7425dbad1741599ba4273?format=webp&width=800',
+  horse_palmeraie_1: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2Fe18c0344afd1461f8c9f2b2c0886e282?format=webp&width=800',
+  horse_palmeraie_2: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F72ac617aff4646c28491a5a699f3db0a?format=webp&width=800',
+  
+  hot_air_balloon_main: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F31787917bc5f4e978a383051a5be0495?format=webp&width=800',
+  
+  overnight_desert_stay: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F5b0eba128a3140b5b84ab6ecaddc73ea?format=webp&width=800',
+  
+  paragliding_main: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F5218a5bda92a4be391a0e145dfb67d7d?format=webp&width=800',
+  paragliding_1: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2Fd04f30fd6c0d4641902552053477c223?format=webp&width=800',
+  paragliding_2: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F66e7618c773a44d09f27b0a476fe400f?format=webp&width=800',
+  
+  quad_agafay_main: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F49cf4ead86a648708736b1267ab9cf8a?format=webp&width=800',
+  quad_agafay_1: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2Ffa93ddcef87044739566d94d6e50ea7f?format=webp&width=800',
+  quad_agafay_2: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F303b5eec8a7f4d9191e3a720a3dc1315?format=webp&width=800',
+  
+  quad_palmeraie_main: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2Fd0d38a3c215a43ba89a232542c5a64af?format=webp&width=800',
+  quad_palmeraie_1: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F4eb0f63296a64694a3b4b5bb8c9779bc?format=webp&width=800',
+  quad_palmeraie_2: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2Fdd19cbcf828e49c8af19397e6e6d61cb?format=webp&width=800',
+};
+
 export const services: Service[] = [
   // Agafay Activities
   {
@@ -46,15 +95,15 @@ export const services: Service[] = [
     description: 'Includes 1h quad, 30min camel ride, dinner with show and fire performance, pool access, and round-trip transport.',
     price: '€66 / 660Dhs',
     duration: 'Full experience',
-    image: 'https://cdn.builder.io/api/v1/image/assets%2Ff0ef3956f1594dd0bfe19365a1ee323f%2F63be210f3a324f06824181cec7a031a6?format=webp&width=800',
+    image: images.agafay_pack_main,
     location: 'Agafay Desert',
     inclusions: ['1h quad ride', '30min camel ride', 'Dinner & show', 'Pool access', 'Round-trip transport', 'Photos stop'],
     gallery: [
-      'https://cdn.builder.io/api/v1/image/assets%2Ff0ef3956f1594dd0bfe19365a1ee323f%2F63be210f3a324f06824181cec7a031a6?format=webp&width=800',
-      'https://cdn.builder.io/api/v1/image/assets%2Ff0ef3956f1594dd0bfe19365a1ee323f%2Fcc57f8f0045b4300bbd0cd78fcebcdff?format=webp&width=800',
-      'https://cdn.builder.io/api/v1/image/assets%2Ff0ef3956f1594dd0bfe19365a1ee323f%2F0190eec513e649ae8a196c701c3c96f2?format=webp&width=800',
-      'https://cdn.builder.io/api/v1/image/assets%2Ff0ef3956f1594dd0bfe19365a1ee323f%2F55959b98a4974910b9d471aba1abdb6b?format=webp&width=800',
-      'https://cdn.builder.io/api/v1/image/assets%2Ff0ef3956f1594dd0bfe19365a1ee323f%2Fa2a6321a2582421eadff880defe7c8d4?format=webp&width=800',
+      images.agafay_pack_main,
+      images.agafay_pack_1,
+      images.agafay_pack_2,
+      images.agafay_pack_3,
+      images.agafay_pack_4,
     ],
   },
   {
@@ -66,10 +115,10 @@ export const services: Service[] = [
     description: 'Select from multiple quad riding options with different durations and add-ons like dinner.',
     price: '€35 / 350Dhs',
     duration: '1 hour',
-    image: placeholderImage,
+    image: images.quad_agafay_main,
     location: 'Agafay Desert',
     inclusions: ['Quad ride', 'Safety equipment', 'Round-trip transport', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.quad_agafay_main, images.quad_agafay_1, images.quad_agafay_2],
     variants: [
       {
         id: 'agafay-quad-1h-solo',
@@ -114,10 +163,10 @@ export const services: Service[] = [
     description: '1h quad ride followed by dinner and show.',
     price: '€45 / 450Dhs',
     duration: '4 hours',
-    image: placeholderImage,
+    image: images.quad_agafay_main,
     location: 'Agafay Desert',
     inclusions: ['1h quad ride', 'Dinner & show', 'Round-trip transport', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.quad_agafay_main, images.quad_agafay_1, images.quad_agafay_2],
     hideFromList: true,
   },
   {
@@ -129,10 +178,10 @@ export const services: Service[] = [
     description: 'Select from camel riding options with or without dinner experience.',
     price: '€15 / 150Dhs',
     duration: '30 minutes',
-    image: placeholderImage,
+    image: images.camel_agafay_main,
     location: 'Agafay Desert',
     inclusions: ['Camel ride', 'Round-trip transport', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.camel_agafay_main, images.camel_agafay_1, images.camel_agafay_2],
     variants: [
       {
         id: 'agafay-camel-ride',
@@ -161,10 +210,10 @@ export const services: Service[] = [
     description: '30min camel ride and dinner with show.',
     price: '€40 / 400Dhs',
     duration: '3 hours',
-    image: placeholderImage,
+    image: images.camel_agafay_main,
     location: 'Agafay Desert',
     inclusions: ['30min camel ride', 'Dinner & show', 'Round-trip transport', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.camel_agafay_main, images.camel_agafay_1, images.camel_agafay_2],
     hideFromList: true,
   },
   {
@@ -176,10 +225,10 @@ export const services: Service[] = [
     description: 'Standard 1-hour quad tour in Agafay desert.',
     price: '€35 / 350Dhs',
     duration: '1 hour',
-    image: placeholderImage,
+    image: images.quad_agafay_main,
     location: 'Agafay Desert',
     inclusions: ['1h quad ride', 'Safety equipment', 'Round-trip transport', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.quad_agafay_main, images.quad_agafay_1, images.quad_agafay_2],
     hideFromList: true,
   },
   {
@@ -191,10 +240,10 @@ export const services: Service[] = [
     description: 'Shared quad experience for two people.',
     price: '€40 / 400Dhs',
     duration: '1 hour',
-    image: placeholderImage,
+    image: images.quad_agafay_main,
     location: 'Agafay Desert',
     inclusions: ['1h quad ride', 'Safety equipment', 'Round-trip transport', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.quad_agafay_main, images.quad_agafay_1, images.quad_agafay_2],
     hideFromList: true,
   },
   {
@@ -206,10 +255,10 @@ export const services: Service[] = [
     description: 'Extended 2-hour desert ride for adventure lovers.',
     price: '€45 / 450Dhs',
     duration: '2 hours',
-    image: placeholderImage,
+    image: images.quad_agafay_main,
     location: 'Agafay Desert',
     inclusions: ['2h quad ride', 'Safety equipment', 'Round-trip transport', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.quad_agafay_main, images.quad_agafay_1, images.quad_agafay_2],
     hideFromList: true,
   },
   {
@@ -235,10 +284,10 @@ export const services: Service[] = [
     description: '30min scenic camel ride in Agafay dunes.',
     price: '€15 / 150Dhs',
     duration: '30 minutes',
-    image: placeholderImage,
+    image: images.camel_agafay_main,
     location: 'Agafay Desert',
     inclusions: ['30min camel ride', 'Round-trip transport', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.camel_agafay_main, images.camel_agafay_1, images.camel_agafay_2],
     hideFromList: true,
   },
   {
@@ -250,10 +299,10 @@ export const services: Service[] = [
     description: 'Dinner under the stars with live show and fire performance.',
     price: '€30 / 300Dhs',
     duration: '3 hours',
-    image: placeholderImage,
+    image: images.agafay_pack_main,
     location: 'Agafay Desert',
     inclusions: ['Traditional dinner', 'Live show', 'Fire performance', 'Round-trip transport', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.agafay_pack_main, images.agafay_pack_1, images.agafay_pack_2],
   },
   {
     id: 'agafay-overnight',
@@ -264,10 +313,10 @@ export const services: Service[] = [
     description: 'Includes dinner, breakfast, and private tent overnight stay.',
     price: '€150 / 1500Dhs',
     duration: 'Overnight',
-    image: placeholderImage,
+    image: images.overnight_desert_stay,
     location: 'Agafay Desert',
     inclusions: ['Dinner', 'Breakfast', 'Private tent', 'Round-trip transport', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.overnight_desert_stay],
   },
   {
     id: 'agafay-horse-ride',
@@ -276,7 +325,7 @@ export const services: Service[] = [
     title: 'Horse Ride (1h)',
     shortDescription: '1-hour horse ride experience in Agafay desert',
     description: '1-hour horse ride experience in Agafay desert.',
-    price: '���45 / 450Dhs',
+    price: '€45 / 450Dhs',
     duration: '1 hour',
     image: placeholderImage,
     location: 'Agafay Desert',
@@ -294,10 +343,10 @@ export const services: Service[] = [
     description: 'Scenic 1-hour camel ride through Marrakech palm groves.',
     price: '€20 / 200Dhs',
     duration: '1 hour',
-    image: placeholderImage,
+    image: images.camel_palmeraie_main,
     location: 'Marrakech Palmeraie',
     inclusions: ['1h camel ride', 'Round-trip transport', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.camel_palmeraie_main, images.camel_palmeraie_1, images.camel_palmeraie_2],
   },
   {
     id: 'palmeraie-quad',
@@ -308,10 +357,10 @@ export const services: Service[] = [
     description: 'Select from multiple quad riding options through the palm groves with different durations.',
     price: '€30 / 300Dhs',
     duration: '1 hour',
-    image: placeholderImage,
+    image: images.quad_palmeraie_main,
     location: 'Marrakech Palmeraie',
     inclusions: ['Quad ride', 'Safety equipment', 'Round-trip transport', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.quad_palmeraie_main, images.quad_palmeraie_1, images.quad_palmeraie_2],
     variants: [
       {
         id: 'palmeraie-quad-1h-solo',
@@ -338,12 +387,12 @@ export const services: Service[] = [
     title: 'Quad (1h Solo)',
     shortDescription: 'Standard 1-hour solo quad tour',
     description: 'Standard 1-hour solo quad tour.',
-    price: '��30 / 300Dhs',
+    price: '€30 / 300Dhs',
     duration: '1 hour',
-    image: placeholderImage,
+    image: images.quad_palmeraie_main,
     location: 'Marrakech Palmeraie',
     inclusions: ['1h quad ride', 'Safety equipment', 'Round-trip transport', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.quad_palmeraie_main, images.quad_palmeraie_1, images.quad_palmeraie_2],
     hideFromList: true,
   },
   {
@@ -355,10 +404,10 @@ export const services: Service[] = [
     description: 'Extended 2-hour desert ride.',
     price: '€45 / 450Dhs',
     duration: '2 hours',
-    image: placeholderImage,
+    image: images.quad_palmeraie_main,
     location: 'Marrakech Palmeraie',
     inclusions: ['2h quad ride', 'Safety equipment', 'Round-trip transport', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.quad_palmeraie_main, images.quad_palmeraie_1, images.quad_palmeraie_2],
     hideFromList: true,
   },
   {
@@ -370,10 +419,10 @@ export const services: Service[] = [
     description: 'Quad for 2 people through the Palmeraie.',
     price: '€40 / 400Dhs',
     duration: '1 hour',
-    image: placeholderImage,
+    image: images.quad_palmeraie_main,
     location: 'Marrakech Palmeraie',
     inclusions: ['1h quad ride', 'Safety equipment', 'Round-trip transport', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.quad_palmeraie_main, images.quad_palmeraie_1, images.quad_palmeraie_2],
     hideFromList: true,
   },
   {
@@ -385,10 +434,10 @@ export const services: Service[] = [
     description: '1-hour buggy ride for 2.',
     price: '€120 / 1200Dhs',
     duration: '1 hour',
-    image: placeholderImage,
+    image: images.buggy_palmeraie_main,
     location: 'Marrakech Palmeraie',
     inclusions: ['1h buggy ride', 'Safety equipment', 'Round-trip transport', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.buggy_palmeraie_main, images.buggy_palmeraie_1, images.buggy_palmeraie_2],
   },
   {
     id: 'palmeraie-horse-ride',
@@ -399,10 +448,10 @@ export const services: Service[] = [
     description: '1-hour horseback ride in the palm groves.',
     price: '€45 / 450Dhs',
     duration: '1 hour',
-    image: placeholderImage,
+    image: images.horse_palmeraie_main,
     location: 'Marrakech Palmeraie',
     inclusions: ['1h horse ride', 'Safety equipment', 'Round-trip transport', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.horse_palmeraie_main, images.horse_palmeraie_1, images.horse_palmeraie_2],
   },
 
   // Other Activities
@@ -415,10 +464,10 @@ export const services: Service[] = [
     description: 'Peaceful sunrise flight with 360° view, followed by breakfast and certificate.',
     price: 'From €80 / 800Dhs',
     duration: '4 hours',
-    image: placeholderImage,
+    image: images.hot_air_balloon_main,
     location: 'Marrakech Region',
     inclusions: ['Sunrise balloon flight', 'Breakfast', 'Flight certificate', 'Round-trip transport', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.hot_air_balloon_main],
     priceVariants: [
       { label: 'Adult', price: '€150 / 1500Dhs', priceNumeric: 150 },
       { label: 'Child (-7 years)', price: '€80 / 800Dhs', priceNumeric: 80 }
@@ -433,10 +482,10 @@ export const services: Service[] = [
     description: 'Guided biking tour through Marrakech surroundings.',
     price: '€45',
     duration: '3 hours',
-    image: placeholderImage,
+    image: images.biking_tour_main,
     location: 'Marrakech Region',
     inclusions: ['Professional guide', 'Bike rental', 'Safety equipment', 'Round-trip transport', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.biking_tour_main, images.biking_tour_1, images.biking_tour_2],
   },
   {
     id: 'bike-rental',
@@ -447,10 +496,10 @@ export const services: Service[] = [
     description: 'Explore freely with a rented bicycle.',
     price: 'From €15',
     duration: 'Flexible',
-    image: placeholderImage,
+    image: images.biking_tour_main,
     location: 'Marrakech',
     inclusions: ['Bike rental', 'Safety equipment', 'Lock'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.biking_tour_main, images.biking_tour_1, images.biking_tour_2],
     isRental: true,
   },
   {
@@ -460,7 +509,7 @@ export const services: Service[] = [
     title: 'Scooter Rental',
     shortDescription: 'Rent a scooter for a full-day city or countryside ride',
     description: 'Rent a scooter for a full-day city or countryside ride.',
-    price: '��50',
+    price: '€50',
     duration: 'Full day',
     image: placeholderImage,
     location: 'Marrakech',
@@ -477,10 +526,10 @@ export const services: Service[] = [
     description: 'Experience aerial views of Marrakech and the Atlas Mountains.',
     price: '€85',
     duration: '30 minutes flight',
-    image: placeholderImage,
+    image: images.paragliding_main,
     location: 'Atlas Mountains',
     inclusions: ['Professional pilot', 'Safety equipment', 'Round-trip transport', 'Photos & video', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.paragliding_main, images.paragliding_1, images.paragliding_2],
   },
   {
     id: 'cooking-class',
@@ -491,10 +540,10 @@ export const services: Service[] = [
     description: 'Immerse yourself in Moroccan culinary traditions with a hands-on cooking class. Learn to prepare traditional dishes like tagine, couscous, and Moroccan salads from experienced local chefs. After cooking, sit down to enjoy the delicious meal you have created. All ingredients, equipment, and instruction are included in this authentic cultural experience.',
     price: '€50 / 500Dhs',
     duration: '3-4 hours',
-    image: placeholderImage,
+    image: images.cooking_class_main,
     location: 'Marrakech',
     inclusions: ['Professional chef instructor', 'All ingredients and equipment', 'Recipe booklet', 'Eat your prepared meal', 'Round-trip transport', 'Apron and cooking tools', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.cooking_class_main, images.cooking_class_1, images.cooking_class_2],
   },
 
   // Tours
@@ -609,7 +658,7 @@ export const services: Service[] = [
     itinerary: [
       {
         day: 'Day 1',
-        description: 'Early pickup (7:00–8:00 AM) from your Marrakech hotel/riad. Drive through the High Atlas Mountains (Tizi n’Tichka pass). Visit Aït Ben Haddou (UNESCO site) and explore the ksar. Continue through Ouarzazate and the Draa Valley. Camel ride at sunset into the Zagora dunes. Dinner and overnight in a Berber camp (music, campfire, stars).'
+        description: 'Early pickup (7:00–8:00 AM) from your Marrakech hotel/riad. Drive through the High Atlas Mountains (Tizi n\'Tichka pass). Visit Aït Ben Haddou (UNESCO site) and explore the ksar. Continue through Ouarzazate and the Draa Valley. Camel ride at sunset into the Zagora dunes. Dinner and overnight in a Berber camp (music, campfire, stars).'
       },
       {
         day: 'Day 2',
