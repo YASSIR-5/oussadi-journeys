@@ -12,9 +12,11 @@ const AgafayActivities = () => {
     <div className="min-h-screen pt-24">
       {/* Hero Section */}
       <section className="relative h-[400px] md:h-[500px] overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${agafayHero})` }}
+        <img
+          src={agafayHero}
+          alt="Agafay Desert"
+          className="absolute inset-0 w-full h-full object-cover"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
         <div className="relative h-full container mx-auto px-4 flex flex-col justify-end pb-12">
