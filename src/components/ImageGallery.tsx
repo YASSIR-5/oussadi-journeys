@@ -75,6 +75,7 @@ const ImageGallery = ({ images, title }: ImageGalleryProps) => {
                   src={image}
                   alt={`${title} - Image ${index + 1}`}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
             ))}
