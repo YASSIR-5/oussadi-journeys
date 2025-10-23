@@ -630,7 +630,7 @@ export const services: Service[] = [
     description: 'Comfortable and reliable transfer service between Marrakech Airport and your accommodation. Professional drivers, clean vehicles, and punctual service guaranteed.',
     price: '€30 / 300Dhs',
     duration: '30-45 minutes',
-    image: placeholderImage,
+    image: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F5dd1f8a344bb4a95bd13a7629e92a492?format=webp&width=800',
     location: 'Marrakech Airport',
     inclusions: ['Professional driver', 'Clean comfortable vehicle', 'Meet & greet service', 'Luggage assistance'],
   },
