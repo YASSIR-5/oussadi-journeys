@@ -642,7 +642,7 @@ export const services: Service[] = [
     description: 'Comfortable private transfer service between any cities in Morocco. Perfect for traveling to Casablanca, Fes, Essaouira, Agadir, or any other destination. Professional drivers with modern, air-conditioned vehicles ensure a safe and pleasant journey.',
     price: 'Custom Quote',
     duration: 'Variable',
-    image: placeholderImage,
+    image: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F9da8d3d6d9a34a618f4b613860af98f2?format=webp&width=800',
     location: 'Morocco-wide',
     inclusions: ['Professional driver', 'Modern air-conditioned vehicle', 'Flexible departure times', 'Luggage assistance', 'Rest stops included'],
   },
