@@ -47,9 +47,9 @@ const images = {
   biking_tour_1: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F40bbed6ba6d6423da7499530d63db559?format=webp&width=800',
   biking_tour_2: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F319381ce1bf543e898497c276f90b721?format=webp&width=800',
   
-  buggy_palmeraie_main: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F5c610c6d09dd4bd9a003d7e556984053?format=webp&width=800',
-  buggy_palmeraie_1: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F9a601a9fdc1243fe862993554367253d?format=webp&width=800',
-  buggy_palmeraie_2: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F5f0f0f78779b4208bbe0c943e156ca63?format=webp&width=800',
+  buggy_palmeraie_main: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2Fe77a58b4c94b4b38b21d8460acc0201d?format=webp&width=800',
+  buggy_palmeraie_1: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F61d571e8222c42c9b50c4b14b7568100?format=webp&width=800',
+  buggy_palmeraie_2: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F3ae4efa8a7b44829bac1b1de19da7b28?format=webp&width=800',
   
   camel_agafay_main: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F06bff8d5284f411dacffee8a6c63d0d6?format=webp&width=800',
   camel_agafay_1: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F512cf3ff29254e6180643fc5ad9e1aa7?format=webp&width=800',
@@ -63,9 +63,9 @@ const images = {
   cooking_class_1: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2Fbb9304b97ee045bbb066b17eaaa5b32d?format=webp&width=800',
   cooking_class_2: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F56eb525b8f6c4371be30b900576eb99c?format=webp&width=800',
   
-  horse_palmeraie_main: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2Fb8bba24fffe7425dbad1741599ba4273?format=webp&width=800',
-  horse_palmeraie_1: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2Fe18c0344afd1461f8c9f2b2c0886e282?format=webp&width=800',
-  horse_palmeraie_2: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F72ac617aff4646c28491a5a699f3db0a?format=webp&width=800',
+  horse_palmeraie_main: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F0a9d0daba6054d5eadd934557379b763?format=webp&width=800',
+  horse_palmeraie_1: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2Fa86fb404a941419a8fedf1b3a8326436?format=webp&width=800',
+  horse_palmeraie_2: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F849de24c84dd4a6aab00a0d02243b9d4?format=webp&width=800',
   
   hot_air_balloon_main: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F31787917bc5f4e978a383051a5be0495?format=webp&width=800',
   
@@ -99,7 +99,6 @@ export const services: Service[] = [
     location: 'Agafay Desert',
     inclusions: ['1h quad ride', '30min camel ride', 'Dinner & show', 'Pool access', 'Round-trip transport', 'Photos stop'],
     gallery: [
-      images.agafay_pack_main,
       images.agafay_pack_1,
       images.agafay_pack_2,
       images.agafay_pack_3,
@@ -118,7 +117,7 @@ export const services: Service[] = [
     image: images.quad_agafay_main,
     location: 'Agafay Desert',
     inclusions: ['Quad ride', 'Safety equipment', 'Round-trip transport', 'Photos stop'],
-    gallery: [images.quad_agafay_main, images.quad_agafay_1, images.quad_agafay_2],
+    gallery: [images.quad_agafay_1, images.quad_agafay_2],
     variants: [
       {
         id: 'agafay-quad-1h-solo',
@@ -181,7 +180,7 @@ export const services: Service[] = [
     image: images.camel_agafay_main,
     location: 'Agafay Desert',
     inclusions: ['Camel ride', 'Round-trip transport', 'Photos stop'],
-    gallery: [images.camel_agafay_main, images.camel_agafay_1, images.camel_agafay_2],
+    gallery: [images.camel_agafay_1, images.camel_agafay_2],
     variants: [
       {
         id: 'agafay-camel-ride',
@@ -346,7 +345,7 @@ export const services: Service[] = [
     image: images.camel_palmeraie_main,
     location: 'Marrakech Palmeraie',
     inclusions: ['1h camel ride', 'Round-trip transport', 'Photos stop'],
-    gallery: [images.camel_palmeraie_main, images.camel_palmeraie_1, images.camel_palmeraie_2],
+    gallery: [images.camel_palmeraie_1, images.camel_palmeraie_2],
   },
   {
     id: 'palmeraie-quad',
@@ -437,7 +436,7 @@ export const services: Service[] = [
     image: images.buggy_palmeraie_main,
     location: 'Marrakech Palmeraie',
     inclusions: ['1h buggy ride', 'Safety equipment', 'Round-trip transport', 'Photos stop'],
-    gallery: [images.buggy_palmeraie_main, images.buggy_palmeraie_1, images.buggy_palmeraie_2],
+    gallery: [images.buggy_palmeraie_1, images.buggy_palmeraie_2],
   },
   {
     id: 'palmeraie-horse-ride',
@@ -451,7 +450,7 @@ export const services: Service[] = [
     image: images.horse_palmeraie_main,
     location: 'Marrakech Palmeraie',
     inclusions: ['1h horse ride', 'Safety equipment', 'Round-trip transport', 'Photos stop'],
-    gallery: [images.horse_palmeraie_main, images.horse_palmeraie_1, images.horse_palmeraie_2],
+    gallery: [images.horse_palmeraie_1, images.horse_palmeraie_2],
   },
 
   // Other Activities
@@ -467,7 +466,7 @@ export const services: Service[] = [
     image: images.hot_air_balloon_main,
     location: 'Marrakech Region',
     inclusions: ['Sunrise balloon flight', 'Breakfast', 'Flight certificate', 'Round-trip transport', 'Photos stop'],
-    gallery: [images.hot_air_balloon_main],
+    gallery: [],
     priceVariants: [
       { label: 'Adult', price: '€150 / 1500Dhs', priceNumeric: 150 },
       { label: 'Child (-7 years)', price: '€80 / 800Dhs', priceNumeric: 80 }
@@ -485,7 +484,7 @@ export const services: Service[] = [
     image: images.biking_tour_main,
     location: 'Marrakech Region',
     inclusions: ['Professional guide', 'Bike rental', 'Safety equipment', 'Round-trip transport', 'Photos stop'],
-    gallery: [images.biking_tour_main, images.biking_tour_1, images.biking_tour_2],
+    gallery: [images.biking_tour_1, images.biking_tour_2],
   },
   {
     id: 'bike-rental',
@@ -496,10 +495,10 @@ export const services: Service[] = [
     description: 'Explore freely with a rented bicycle.',
     price: 'From €15',
     duration: 'Flexible',
-    image: images.biking_tour_main,
+    image: placeholderImage,
     location: 'Marrakech',
     inclusions: ['Bike rental', 'Safety equipment', 'Lock'],
-    gallery: [images.biking_tour_main, images.biking_tour_1, images.biking_tour_2],
+    gallery: [],
     isRental: true,
   },
   {
@@ -529,7 +528,7 @@ export const services: Service[] = [
     image: images.paragliding_main,
     location: 'Atlas Mountains',
     inclusions: ['Professional pilot', 'Safety equipment', 'Round-trip transport', 'Photos & video', 'Photos stop'],
-    gallery: [images.paragliding_main, images.paragliding_1, images.paragliding_2],
+    gallery: [images.paragliding_1, images.paragliding_2],
   },
   {
     id: 'cooking-class',
@@ -543,7 +542,7 @@ export const services: Service[] = [
     image: images.cooking_class_main,
     location: 'Marrakech',
     inclusions: ['Professional chef instructor', 'All ingredients and equipment', 'Recipe booklet', 'Eat your prepared meal', 'Round-trip transport', 'Apron and cooking tools', 'Photos stop'],
-    gallery: [images.cooking_class_main, images.cooking_class_1, images.cooking_class_2],
+    gallery: [images.cooking_class_1, images.cooking_class_2],
   },
 
   // Tours
