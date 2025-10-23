@@ -42,7 +42,7 @@ const Navbar = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             <Link to="/" className="flex items-center gap-3 transition-transform hover:scale-105">
-              <img src={logoIcon} alt="Oussaid Tourism Icon" className="h-12 w-auto" />
+              <img src={logoIcon} alt="Oussaid Tourism Icon" className="h-12 w-auto" decoding="async" />
               <div className="flex flex-col leading-tight">
                 <span className={`text-2xl font-bold tracking-tight transition-colors ${
                   (isScrolled || !isHomePage) ? 'text-primary' : 'text-white'
