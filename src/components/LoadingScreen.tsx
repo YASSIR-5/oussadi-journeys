@@ -9,14 +9,14 @@ const LoadingScreen = ({ onLoadingComplete }: LoadingScreenProps) => {
   const [stage, setStage] = useState<'icon' | 'wordmark' | 'complete'>('icon');
 
   useEffect(() => {
-    // Icon build and settle: 0-1200ms
-    const wordmarkTimer = setTimeout(() => setStage('wordmark'), 1200);
-    
-    // Complete animation and exit: at 3000ms
+    // Icon build and settle: 0-600ms
+    const wordmarkTimer = setTimeout(() => setStage('wordmark'), 600);
+
+    // Complete animation and exit: at 1500ms
     const completeTimer = setTimeout(() => {
       setStage('complete');
-      setTimeout(onLoadingComplete, 500);
-    }, 3000);
+      setTimeout(onLoadingComplete, 300);
+    }, 1500);
 
     return () => {
       clearTimeout(wordmarkTimer);
