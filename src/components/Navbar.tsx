@@ -114,7 +114,7 @@ const Navbar = () => {
             {/* Header with Logo and Close Button */}
             <div className="flex items-center justify-between p-6 border-b border-gray-200">
               <div className="flex items-center gap-3">
-                <img src={logoIcon} alt="Oussaid Tourism Icon" className="h-10 w-auto" />
+                <img src={logoIcon} alt="Oussaid Tourism Icon" className="h-10 w-auto" decoding="async" />
                 <div className="flex flex-col leading-tight">
                   <span className="text-xl font-bold tracking-tight text-primary">OUSSAID</span>
                   <span className="text-xs font-medium tracking-widest text-secondary">TOURISME</span>
