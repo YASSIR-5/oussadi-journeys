@@ -76,6 +76,7 @@ const ImageGallery = ({ images, title }: ImageGalleryProps) => {
                   alt={`${title} - Image ${index + 1}`}
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
             ))}
@@ -121,6 +122,7 @@ const ImageGallery = ({ images, title }: ImageGalleryProps) => {
                   alt={`Thumbnail ${index + 1}`}
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  decoding="async"
                 />
               </button>
             ))}
@@ -151,6 +153,7 @@ const ImageGallery = ({ images, title }: ImageGalleryProps) => {
                     alt={`${title} - Image ${index + 1}`}
                     className="max-w-full max-h-full object-contain"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
               ))}
