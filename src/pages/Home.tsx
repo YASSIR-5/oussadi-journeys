@@ -48,6 +48,7 @@ const Home = () => {
             src={heroImage}
             alt="Marrakech Morocco"
             className="w-full h-full object-cover"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-hero" />
         </div>
