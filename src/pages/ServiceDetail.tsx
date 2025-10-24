@@ -163,7 +163,7 @@ const ServiceDetail = () => {
                   </Button>
                 </Link>
               ) : (
-                <Link to={`/checkout/${service.id}`} className="block mb-4">
+                <Link to={`/checkout/${selectedVariant?.id || service.id}`} className="block mb-4">
                   <Button className="w-full" size="lg">
                     Book Now
                     <ArrowRight className="w-5 h-5" />
