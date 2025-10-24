@@ -212,8 +212,14 @@ const ServiceDetail = () => {
               <div className="space-y-4 pt-4 border-t border-border">
                 <div className="flex items-center justify-between">
                   <span className="text-muted-foreground">Duration</span>
-                  <span className="font-semibold">{currentDuration}</span>
+                  <span className="font-semibold">{currentDuration.split('|')[0].trim()}</span>
                 </div>
+                {currentDuration.includes('Departure') && (
+                  <div className="flex items-center justify-between">
+                    <span className="text-muted-foreground">Departure</span>
+                    <span className="font-semibold">{currentDuration.split('Departure at ')[1]}</span>
+                  </div>
+                )}
                 <div className="flex items-center justify-between">
                   <span className="text-muted-foreground">Location</span>
                   <span className="font-semibold">{service.location}</span>
