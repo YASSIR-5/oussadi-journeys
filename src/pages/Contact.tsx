@@ -139,9 +139,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold mb-2">Working Hours</h3>
                     <p className="text-muted-foreground">
-                      Mon-Fri: 8:00 - 18:00<br />
-                      Sat: 8:00 - 13:00<br />
-                      Sun: Day off
+                      24/7 Available<br />
+                      Round-the-clock service
                     </p>
                   </div>
                 </div>
