@@ -316,8 +316,8 @@ export const services: Service[] = [
     location: 'Agafay Desert',
     inclusions: ['Dinner', 'Breakfast', 'Private tent', 'Round-trip transport', 'Photos stop'],
     gallery: [
-      'https://cdn.builder.io/o/assets%2Ff5ae612caa3a43a889240417f0349a86%2F916913cfaaf548cb938e9edc4330a836?alt=media&token=c07e6874-d7c8-4722-95ac-32bb1065acf4&apiKey=f5ae612caa3a43a889240417f0349a86',
-      'https://cdn.builder.io/o/assets%2Ff5ae612caa3a43a889240417f0349a86%2F455d56ac78294f00891dbe9b92810c80?alt=media&token=0b8670c1-aa6c-4e14-b0af-3c82dd6170e3&apiKey=f5ae612caa3a43a889240417f0349a86'
+      'https://cdn.builder.io/o/assets%2Ff5ae612caa3a43a889240417f0349a86%2F3c392de6fc71437b8c2b722e03e18eaf?alt=media&token=b74bbd71-6db6-4d56-9d46-85062fbfa031&apiKey=f5ae612caa3a43a889240417f0349a86',
+      'https://cdn.builder.io/o/assets%2Ff5ae612caa3a43a889240417f0349a86%2F20211411011d46689988f50bb75f4a93?alt=media&token=d0c52f38-36d0-4339-961a-05cd9cdb1615&apiKey=f5ae612caa3a43a889240417f0349a86'
     ],
   },
   {
@@ -469,7 +469,7 @@ export const services: Service[] = [
     image: images.hot_air_balloon_main,
     location: 'Marrakech Region',
     inclusions: ['Sunrise balloon flight', 'Breakfast', 'Flight certificate', 'Round-trip transport', 'Photos stop'],
-    gallery: ['https://cdn.builder.io/o/assets%2Ff5ae612caa3a43a889240417f0349a86%2Fd7b32080a3064207884724665f43d98f?alt=media&token=03e77c7b-449a-46ce-8600-cfa73e1285cb&apiKey=f5ae612caa3a43a889240417f0349a86'],
+    gallery: ['https://cdn.builder.io/o/assets%2Ff5ae612caa3a43a889240417f0349a86%2Faa7d57cf66844e86870f59a73e628652?alt=media&token=53eb403c-26e2-4242-8d2b-0ece20d97402&apiKey=f5ae612caa3a43a889240417f0349a86'],
     priceVariants: [
       { label: 'Adult', price: '€150 / 1500Dhs', priceNumeric: 150 },
       { label: 'Child (-7 years)', price: '€80 / 800Dhs', priceNumeric: 80 }
