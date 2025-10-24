@@ -70,6 +70,8 @@ const Checkout = () => {
       
       let bookingData;
 
+      const serviceTitle = selectedVariant ? `${service?.title} - ${selectedVariant.label}` : service?.title;
+
       if (service?.isRental) {
         bookingData = {
           name: formData.name,
@@ -79,9 +81,9 @@ const Checkout = () => {
           to: formData.endDate,
           number_of_days: calculateDays(),
           message: formData.message,
-          service: service?.title,
-          price: service?.price,
-          _subject: `New Rental Booking: ${service?.title}`,
+          service: serviceTitle,
+          price: displayPrice,
+          _subject: `New Rental Booking: ${serviceTitle}`,
           _template: 'table',
         };
       } else if (service?.id === 'airport-transfer') {
@@ -96,17 +98,17 @@ const Checkout = () => {
           flight_number: formData.flightNumber,
           reference_label: formData.horseLabel,
           message: formData.message,
-          service: service?.title,
-          price: service?.price,
-          _subject: `New Airport Transfer Booking: ${service?.title}`,
+          service: serviceTitle,
+          price: displayPrice,
+          _subject: `New Airport Transfer Booking: ${serviceTitle}`,
           _template: 'table',
         };
       } else {
         bookingData = {
           ...formData,
-          service: service?.title,
-          price: service?.price,
-          _subject: `New Booking: ${service?.title}`,
+          service: serviceTitle,
+          price: displayPrice,
+          _subject: `New Booking: ${serviceTitle}`,
           _template: 'table',
         };
       }
