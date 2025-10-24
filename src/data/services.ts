@@ -712,6 +712,18 @@ export const getServicesBySubcategory = (subcategory: string) => {
   return services.filter(service => service.subcategory === subcategory);
 };
 
+export const getVariantById = (variantId: string) => {
+  for (const service of services) {
+    if (service.variants) {
+      const variant = service.variants.find(v => v.id === variantId);
+      if (variant) {
+        return { service, variant };
+      }
+    }
+  }
+  return null;
+};
+
 export const getFeaturedServices = () => {
   return [
     services.find(s => s.id === 'quad-biking-palm-grove'),
