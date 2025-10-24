@@ -477,14 +477,18 @@ const Checkout = () => {
                   </div>
                   
                   <div>
-                    <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
-                    <p className="text-sm text-muted-foreground">{service.shortDescription}</p>
+                    <h3 className="font-semibold text-lg mb-2">
+                      {selectedVariant ? `${service.title} - ${selectedVariant.label}` : service.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      {selectedVariant?.description || service.shortDescription}
+                    </p>
                   </div>
 
                   <div className="space-y-2 pt-4 border-t">
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Duration</span>
-                      <span className="font-medium">{service.duration}</span>
+                      <span className="font-medium">{displayDuration}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Location</span>
@@ -492,7 +496,7 @@ const Checkout = () => {
                     </div>
                     <div className="flex justify-between items-center pt-4 border-t">
                       <span className="font-semibold">Price per person</span>
-                      <span className="text-2xl font-bold text-primary">{service.price}</span>
+                      <span className="text-2xl font-bold text-primary">{displayPrice}</span>
                     </div>
                   </div>
                 </CardContent>
