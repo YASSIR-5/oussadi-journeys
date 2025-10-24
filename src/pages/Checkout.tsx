@@ -6,7 +6,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { getServiceById } from '@/data/services';
+import { getServiceById, getVariantById } from '@/data/services';
 import { Calendar, Users, Mail, Phone, User, ArrowLeft, MapPin, Plane } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
@@ -14,7 +14,15 @@ const Checkout = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { toast } = useToast();
-  const service = getServiceById(id || '');
+
+  // Check if the ID is a variant ID
+  const variantData = getVariantById(id || '');
+  const service = variantData?.service || getServiceById(id || '');
+  const selectedVariant = variantData?.variant;
+
+  // Use variant price if available, otherwise use service price
+  const displayPrice = selectedVariant?.price || service?.price;
+  const displayDuration = selectedVariant?.duration || service?.duration;
   
   const [formData, setFormData] = useState({
     name: '',
