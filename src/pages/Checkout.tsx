@@ -488,8 +488,14 @@ const Checkout = () => {
                   <div className="space-y-2 pt-4 border-t">
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Duration</span>
-                      <span className="font-medium">{displayDuration}</span>
+                      <span className="font-medium">{displayDuration.split('|')[0].trim()}</span>
                     </div>
+                    {displayDuration.includes('Departure') && (
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">Departure</span>
+                        <span className="font-medium">{displayDuration.split('Departure at ')[1]}</span>
+                      </div>
+                    )}
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Location</span>
                       <span className="font-medium">{service.location}</span>
