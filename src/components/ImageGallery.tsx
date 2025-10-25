@@ -5,13 +5,14 @@ import useEmblaCarousel from 'embla-carousel-react';
 interface ImageGalleryProps {
   images: string[];
   title: string;
+  disableAutoplay?: boolean;
 }
 
 const isVideoUrl = (url: string): boolean => {
   return url.endsWith('.mp4') || url.endsWith('.webm') || url.includes('alt=media');
 };
 
-const ImageGallery = ({ images, title }: ImageGalleryProps) => {
+const ImageGallery = ({ images, title, disableAutoplay = false }: ImageGalleryProps) => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
@@ -20,10 +21,10 @@ const ImageGallery = ({ images, title }: ImageGalleryProps) => {
     dragFree: true 
   });
 
-  // Auto-play functionality
+  // Auto-play functionality (disabled if disableAutoplay is true)
   useEffect(() => {
-    if (!emblaApi) return;
-    
+    if (!emblaApi || disableAutoplay) return;
+
     const interval = setInterval(() => {
       emblaApi.scrollNext();
     }, 3000);
