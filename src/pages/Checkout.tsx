@@ -6,7 +6,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { getServiceById } from '@/data/services';
+import { getServiceById, getVariantById } from '@/data/services';
 import { Calendar, Users, Mail, Phone, User, ArrowLeft, MapPin, Plane } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
@@ -14,7 +14,15 @@ const Checkout = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { toast } = useToast();
-  const service = getServiceById(id || '');
+
+  // Check if the ID is a variant ID
+  const variantData = getVariantById(id || '');
+  const service = variantData?.service || getServiceById(id || '');
+  const selectedVariant = variantData?.variant;
+
+  // Use variant price if available, otherwise use service price
+  const displayPrice = selectedVariant?.price || service?.price;
+  const displayDuration = selectedVariant?.duration || service?.duration;
   
   const [formData, setFormData] = useState({
     name: '',
@@ -62,6 +70,8 @@ const Checkout = () => {
       
       let bookingData;
 
+      const serviceTitle = selectedVariant ? `${service?.title} - ${selectedVariant.label}` : service?.title;
+
       if (service?.isRental) {
         bookingData = {
           name: formData.name,
@@ -71,9 +81,9 @@ const Checkout = () => {
           to: formData.endDate,
           number_of_days: calculateDays(),
           message: formData.message,
-          service: service?.title,
-          price: service?.price,
-          _subject: `New Rental Booking: ${service?.title}`,
+          service: serviceTitle,
+          price: displayPrice,
+          _subject: `New Rental Booking: ${serviceTitle}`,
           _template: 'table',
         };
       } else if (service?.id === 'airport-transfer') {
@@ -88,17 +98,17 @@ const Checkout = () => {
           flight_number: formData.flightNumber,
           reference_label: formData.horseLabel,
           message: formData.message,
-          service: service?.title,
-          price: service?.price,
-          _subject: `New Airport Transfer Booking: ${service?.title}`,
+          service: serviceTitle,
+          price: displayPrice,
+          _subject: `New Airport Transfer Booking: ${serviceTitle}`,
           _template: 'table',
         };
       } else {
         bookingData = {
           ...formData,
-          service: service?.title,
-          price: service?.price,
-          _subject: `New Booking: ${service?.title}`,
+          service: serviceTitle,
+          price: displayPrice,
+          _subject: `New Booking: ${serviceTitle}`,
           _template: 'table',
         };
       }
@@ -467,22 +477,32 @@ const Checkout = () => {
                   </div>
                   
                   <div>
-                    <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
-                    <p className="text-sm text-muted-foreground">{service.shortDescription}</p>
+                    <h3 className="font-semibold text-lg mb-2">
+                      {selectedVariant ? `${service.title} - ${selectedVariant.label}` : service.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      {selectedVariant?.description || service.shortDescription}
+                    </p>
                   </div>
 
                   <div className="space-y-2 pt-4 border-t">
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Duration</span>
-                      <span className="font-medium">{service.duration}</span>
+                      <span className="font-medium">{displayDuration.split('|')[0].trim()}</span>
                     </div>
+                    {displayDuration.includes('Departure') && (
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">Departure</span>
+                        <span className="font-medium">{displayDuration.split('Departure at ')[1]}</span>
+                      </div>
+                    )}
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Location</span>
                       <span className="font-medium">{service.location}</span>
                     </div>
                     <div className="flex justify-between items-center pt-4 border-t">
                       <span className="font-semibold">Price per person</span>
-                      <span className="text-2xl font-bold text-primary">{service.price}</span>
+                      <span className="text-2xl font-bold text-primary">{displayPrice}</span>
                     </div>
                   </div>
                 </CardContent>

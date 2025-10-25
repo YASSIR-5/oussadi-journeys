@@ -92,6 +92,7 @@ const ServiceDetail = () => {
               <ImageGallery
                 images={[service.image, ...(service.gallery || [])]}
                 title={service.title}
+                disableAutoplay={service.id === 'hot-air-balloon' || service.id === 'agafay-overnight'}
               />
             </div>
           )}
@@ -163,7 +164,7 @@ const ServiceDetail = () => {
                   </Button>
                 </Link>
               ) : (
-                <Link to={`/checkout/${service.id}`} className="block mb-4">
+                <Link to={`/checkout/${selectedVariant?.id || service.id}`} className="block mb-4">
                   <Button className="w-full" size="lg">
                     Book Now
                     <ArrowRight className="w-5 h-5" />
@@ -212,8 +213,14 @@ const ServiceDetail = () => {
               <div className="space-y-4 pt-4 border-t border-border">
                 <div className="flex items-center justify-between">
                   <span className="text-muted-foreground">Duration</span>
-                  <span className="font-semibold">{currentDuration}</span>
+                  <span className="font-semibold">{currentDuration.split('|')[0].trim()}</span>
                 </div>
+                {currentDuration.includes('Departure') && (
+                  <div className="flex items-center justify-between">
+                    <span className="text-muted-foreground">Departure</span>
+                    <span className="font-semibold">{currentDuration.split('Departure at ')[1]}</span>
+                  </div>
+                )}
                 <div className="flex items-center justify-between">
                   <span className="text-muted-foreground">Location</span>
                   <span className="font-semibold">{service.location}</span>
