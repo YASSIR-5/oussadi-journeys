@@ -82,6 +82,14 @@ const images = {
   quad_palmeraie_main: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2Fd0d38a3c215a43ba89a232542c5a64af?format=webp&width=800',
   quad_palmeraie_1: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F4eb0f63296a64694a3b4b5bb8c9779bc?format=webp&width=800',
   quad_palmeraie_2: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2Fdd19cbcf828e49c8af19397e6e6d61cb?format=webp&width=800',
+
+  buggy_agafay_main: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2Fb1d0198ffc87483e868580e7e8d8c8df?format=webp&width=800',
+  buggy_agafay_1: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F70dfb963dcd449dea5c8819803973c17?format=webp&width=800',
+  buggy_agafay_2: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F7ca6bb507cb740c78fe7ae47dbd29992?format=webp&width=800',
+
+  horse_agafay_main: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2F600999f44f044e9aad6888ada2dc05a3?format=webp&width=800',
+  horse_agafay_1: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2Fdf79ce9f8b5149bb910b59df0ff97f64?format=webp&width=800',
+  horse_agafay_2: 'https://cdn.builder.io/api/v1/image/assets%2Ff5ae612caa3a43a889240417f0349a86%2Fcb7be4aa67c24a5e961020b059518ef8?format=webp&width=800',
 };
 
 export const services: Service[] = [
@@ -268,11 +276,11 @@ export const services: Service[] = [
     shortDescription: '1-hour buggy adventure for 2 people',
     description: '1-hour buggy adventure for 2 people.',
     price: '€120 / 1200Dhs',
-    duration: '1 hour',
-    image: placeholderImage,
+    duration: '1 hour | Departure at 9:00',
+    image: images.buggy_agafay_main,
     location: 'Agafay Desert',
     inclusions: ['1h buggy ride', 'Safety equipment', 'Round-trip transport', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.buggy_agafay_1, images.buggy_agafay_2],
   },
   {
     id: 'agafay-camel-ride',
@@ -328,11 +336,11 @@ export const services: Service[] = [
     shortDescription: '1-hour horse ride experience in Agafay desert',
     description: '1-hour horse ride experience in Agafay desert.',
     price: '€45 / 450Dhs',
-    duration: '1 hour',
-    image: placeholderImage,
+    duration: '1 hour | Departure at 9:00',
+    image: images.horse_agafay_main,
     location: 'Agafay Desert',
     inclusions: ['1h horse ride', 'Safety equipment', 'Round-trip transport', 'Photos stop'],
-    gallery: [placeholderImage, placeholderImage, placeholderImage],
+    gallery: [images.horse_agafay_1, images.horse_agafay_2],
   },
 
   // Palmeraie Activities
