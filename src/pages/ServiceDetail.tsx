@@ -92,6 +92,7 @@ const ServiceDetail = () => {
               <ImageGallery
                 images={[service.image, ...(service.gallery || [])]}
                 title={service.title}
+                disableAutoplay={service.id === 'hot-air-balloon' || service.id === 'agafay-overnight'}
               />
             </div>
           )}
